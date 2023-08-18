@@ -1,2 +1,2 @@
-# It's cpp and git project
+# It's a cpp project
 start
