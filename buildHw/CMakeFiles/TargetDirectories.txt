@@ -1,0 +1,3 @@
+/home/ubuntu/code/cppHelloWorld/buildHw/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/code/cppHelloWorld/buildHw/CMakeFiles/edit_cache.dir
+/home/ubuntu/code/cppHelloWorld/buildHw/CMakeFiles/main.dir
