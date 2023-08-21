@@ -4,18 +4,21 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ubuntu/code/cppHelloWorld/main.cpp" "/home/ubuntu/code/cppHelloWorld/buildHw/CMakeFiles/main.dir/main.cpp.o"
+  "/home/ubuntu/code/cppHelloWorld/hw/hello.cpp" "/home/ubuntu/code/cppHelloWorld/buildHw/hw/CMakeFiles/helloLib.dir/hello.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "helloLib_EXPORTS"
+  )
+
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../world"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/ubuntu/code/cppHelloWorld/buildHw/hw/CMakeFiles/helloLib.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

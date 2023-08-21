@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/cppHelloWorld/buildHw/CMakeFiles /home/ubuntu/code/cppHelloWorld/buildHw/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/ubuntu/code/cppHelloWorld/buildHw && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/cppHelloWorld/buildHw/CMakeFiles /home/ubuntu/code/cppHelloWorld/buildHw/hw/CMakeFiles/progress.marks
+	cd /home/ubuntu/code/cppHelloWorld/buildHw && $(MAKE) -f CMakeFiles/Makefile2 hw/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/cppHelloWorld/buildHw/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/ubuntu/code/cppHelloWorld/buildHw && $(MAKE) -f CMakeFiles/Makefile2 hw/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,71 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ubuntu/code/cppHelloWorld/buildHw && $(MAKE) -f CMakeFiles/Makefile2 hw/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ubuntu/code/cppHelloWorld/buildHw && $(MAKE) -f CMakeFiles/Makefile2 hw/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ubuntu/code/cppHelloWorld/buildHw && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named main
+# Convenience name for target.
+hw/CMakeFiles/helloLib.dir/rule:
+	cd /home/ubuntu/code/cppHelloWorld/buildHw && $(MAKE) -f CMakeFiles/Makefile2 hw/CMakeFiles/helloLib.dir/rule
+.PHONY : hw/CMakeFiles/helloLib.dir/rule
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+# Convenience name for target.
+helloLib: hw/CMakeFiles/helloLib.dir/rule
 
-# fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named helloLib
-
-# Build rule for target.
-helloLib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 helloLib
 .PHONY : helloLib
 
 # fast build rule for target.
 helloLib/fast:
-	$(MAKE) -f hw/CMakeFiles/helloLib.dir/build.make hw/CMakeFiles/helloLib.dir/build
+	cd /home/ubuntu/code/cppHelloWorld/buildHw && $(MAKE) -f hw/CMakeFiles/helloLib.dir/build.make hw/CMakeFiles/helloLib.dir/build
 .PHONY : helloLib/fast
 
-main.o: main.cpp.o
+hello.o: hello.cpp.o
 
-.PHONY : main.o
+.PHONY : hello.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
-.PHONY : main.cpp.o
+hello.cpp.o:
+	cd /home/ubuntu/code/cppHelloWorld/buildHw && $(MAKE) -f hw/CMakeFiles/helloLib.dir/build.make hw/CMakeFiles/helloLib.dir/hello.cpp.o
+.PHONY : hello.cpp.o
 
-main.i: main.cpp.i
+hello.i: hello.cpp.i
 
-.PHONY : main.i
+.PHONY : hello.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
+hello.cpp.i:
+	cd /home/ubuntu/code/cppHelloWorld/buildHw && $(MAKE) -f hw/CMakeFiles/helloLib.dir/build.make hw/CMakeFiles/helloLib.dir/hello.cpp.i
+.PHONY : hello.cpp.i
 
-main.s: main.cpp.s
+hello.s: hello.cpp.s
 
-.PHONY : main.s
+.PHONY : hello.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
+hello.cpp.s:
+	cd /home/ubuntu/code/cppHelloWorld/buildHw && $(MAKE) -f hw/CMakeFiles/helloLib.dir/build.make hw/CMakeFiles/helloLib.dir/hello.cpp.s
+.PHONY : hello.cpp.s
 
 # Help Target
 help:
@@ -171,11 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... main"
 	@echo "... helloLib"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... hello.o"
+	@echo "... hello.i"
+	@echo "... hello.s"
 .PHONY : help
 
 
@@ -187,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ubuntu/code/cppHelloWorld/buildHw && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

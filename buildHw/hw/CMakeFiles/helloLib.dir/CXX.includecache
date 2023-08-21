@@ -6,9 +6,11 @@
 
 #IncludeRegexTransform: 
 
+/home/ubuntu/code/cppHelloWorld/hw/hello.cpp
+hello.h
 /home/ubuntu/code/cppHelloWorld/hw/hello.h
+iostream
+-
 
-/home/ubuntu/code/cppHelloWorld/main.cpp
-hw/hello.h
 /home/ubuntu/code/cppHelloWorld/hw/hello.h
 

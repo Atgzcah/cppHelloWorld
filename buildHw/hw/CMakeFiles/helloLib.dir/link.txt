@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libhelloLib.so -o libhelloLib.so CMakeFiles/helloLib.dir/hello.cpp.o 

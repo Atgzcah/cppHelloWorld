@@ -54,32 +54,52 @@ CMAKE_BINARY_DIR = /home/ubuntu/code/cppHelloWorld/buildHw
 
 # The main recursive "all" target.
 all: CMakeFiles/main.dir/all
+all: hw/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: hw/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/main.dir/clean
+clean: hw/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory hw
+
+# Recursive "all" directory target.
+hw/all: hw/CMakeFiles/helloLib.dir/all
+
+.PHONY : hw/all
+
+# Recursive "preinstall" directory target.
+hw/preinstall:
+
+.PHONY : hw/preinstall
+
+# Recursive "clean" directory target.
+hw/clean: hw/CMakeFiles/helloLib.dir/clean
+
+.PHONY : hw/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all:
+CMakeFiles/main.dir/all: hw/CMakeFiles/helloLib.dir/all
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/code/cppHelloWorld/buildHw/CMakeFiles --progress-num=1,2,3 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/code/cppHelloWorld/buildHw/CMakeFiles --progress-num=3,4 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/cppHelloWorld/buildHw/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/cppHelloWorld/buildHw/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/cppHelloWorld/buildHw/CMakeFiles 0
 .PHONY : CMakeFiles/main.dir/rule
@@ -93,6 +113,33 @@ main: CMakeFiles/main.dir/rule
 CMakeFiles/main.dir/clean:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
 .PHONY : CMakeFiles/main.dir/clean
+
+#=============================================================================
+# Target rules for target hw/CMakeFiles/helloLib.dir
+
+# All Build rule for target.
+hw/CMakeFiles/helloLib.dir/all:
+	$(MAKE) -f hw/CMakeFiles/helloLib.dir/build.make hw/CMakeFiles/helloLib.dir/depend
+	$(MAKE) -f hw/CMakeFiles/helloLib.dir/build.make hw/CMakeFiles/helloLib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/code/cppHelloWorld/buildHw/CMakeFiles --progress-num=1,2 "Built target helloLib"
+.PHONY : hw/CMakeFiles/helloLib.dir/all
+
+# Build rule for subdir invocation for target.
+hw/CMakeFiles/helloLib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/cppHelloWorld/buildHw/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 hw/CMakeFiles/helloLib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/cppHelloWorld/buildHw/CMakeFiles 0
+.PHONY : hw/CMakeFiles/helloLib.dir/rule
+
+# Convenience name for target.
+helloLib: hw/CMakeFiles/helloLib.dir/rule
+
+.PHONY : helloLib
+
+# clean rule for target.
+hw/CMakeFiles/helloLib.dir/clean:
+	$(MAKE) -f hw/CMakeFiles/helloLib.dir/build.make hw/CMakeFiles/helloLib.dir/clean
+.PHONY : hw/CMakeFiles/helloLib.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
